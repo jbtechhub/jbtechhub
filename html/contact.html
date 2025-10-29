@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact JB Tech Hub</title>
+  <meta name="description" content="Get in touch with JB Tech Hub for collaborations, inquiries, or feedback.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/png" href="../images/logo.png">
+
+  <meta property="og:title" content="Contact JB Tech Hub">
+  <meta property="og:description" content="Contact JB Tech Hub for partnerships, questions, or feedback.">
+  <meta property="og:image" content="https://jbtechhub.github.io/images/og-image.png">
+  <meta property="og:url" content="https://jbtechhub.github.io/contact.html">
+  <meta property="og:type" content="contact">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact JB Tech Hub">
+  <meta name="twitter:description" content="Get in touch with JB Tech Hub for collaborations, inquiries, or feedback.">
+  <meta name="twitter:image" content="https://jbtechhub.github.io/images/og-image.png">
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact JB Tech Hub",
+    "url": "https://jbtechhub.github.io/contact.html",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "email": "support@jbtechhub.com"
+    }
+  }
+  </script>
+</head>
+<body>
+    <header>
+        <div class="logo">JB Tech Hub</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html" >Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>If you have questions or suggestions, feel free to send us a message!</p>
+      
+     
+      <form id="contact-form" action="https://formspree.io/f/xdkwnojp" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Type your message..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+
+        <div id="form-message" style="margin-top: 10px; font-weight: bold;"></div>
+      </form>
+    </div>
+  </section>
+
+
+    <footer class="site-footer">
+        <div class="footer-top">
+
+            <!-- Left: Social icons -->
+            <div class="footer-left">
+                <div class="social-icons">
+                    <h3>Follow Us</h3>
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i
+                            class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Center: Site info -->
+            <div class="footer-center">
+                <h3>Gadget Review</h3>
+                <p>Honest reviews and latest updates on laptops, smartphones, and more.</p>
+            </div>
+
+            <!-- Right: Quick Links -->
+            <div class="footer-right">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Gadget Review. All Rights Reserved.</p>
+
+            <p class="disclaimer">
+                Disclaimer: All product names, images, and descriptions featured on this website
+                are fictional and used for demonstration purposes only.
+                JB Tech Hub is a sample project created for learning and portfolio use.
+                Any resemblance to actual products, brands, or companies is purely coincidental.
+                Images are placeholders and may not represent real devices or existing models.
+            </p>
+        </div>
+
+        <button id="scrollToTopBtn">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
+
