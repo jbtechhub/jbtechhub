@@ -1,0 +1,940 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.2;
+  font-family: Arial, sans-serif;
+}
+
+/* ================
+   HOME PAGE STYLES
+   ================ */
+header {
+    background: rgb(28, 51, 51);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 15px 40px;
+}
+
+.logo{
+  color: white;
+  font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+  transform: scale(1.05); 
+  color: #f4b400;
+}
+
+nav ul li a.active{
+  color: #f4b400;
+}
+
+.home-background{
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url('../images/background-images/home-background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.home-wrapper {
+    padding: 20px;
+    z-index: 1; 
+}
+
+.banner {
+    grid-row: 1;
+    margin: 40px 0;
+    font-size: 30px;
+    opacity: 1; 
+    text-align: center;
+}
+
+.banner p,
+h1{
+  color: #000;
+  font-weight: bold;
+}
+
+/* Review Cards */
+.review-cards {
+    grid-row: 2;
+    display: grid;
+    margin: 0 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background: none; 
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    background-color: darkslategray;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    opacity: 1;
+    transform: translateX(50px);
+    transition: all .5s ease;
+    border: 2px solid lightblue;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.card:hover{
+    transform: translateX(-10px);
+}
+
+.card img {
+    width: 100%;
+     height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin: 15px 0 10px;
+  color: white;
+}
+.card p{
+    font-size: 0.95rem;
+    color: white;
+}
+
+/*============================
+      Laptop X200 Page Styles
+==============================*/
+.laptop-background{
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url('../images/background-images/laptop-background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.laptop-wrapper {
+    padding: 20px;
+    z-index: 1; 
+}
+
+.laptop-wrapper .card{
+  background-color:rgb(136, 104, 62);
+  border: 3px solid rgb(90, 68, 38);
+}
+.banner-section {
+    grid-row: 1;
+    text-align: center;
+    margin: 40px 0;
+    opacity: 1;
+    font-size: 20px;
+}
+
+p.banner-section-dscptn{
+    color: #000;
+}
+
+.subtitle{
+    text-align: center;
+    margin-bottom: 20px;
+}
+    
+.btn{
+    display: inline-block;
+    padding: 10px 10px;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s  ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: #333;
+} 
+
+/* Back link button */
+.back-link{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover{
+    color: gold;
+}
+
+#black-back-link{
+    color:#000;
+}
+
+/* =================================
+   Laptop X200 Standard Page Styles
+   ================================= */
+.product-review {
+    background-color: #34495e;
+    color: #fff;
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+.product-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.product-content h1,p{
+    text-align: center;
+    color: #fff ;
+}
+
+.overview {
+    text-align: left;
+}
+
+.product-content img{
+    display: block;
+    margin: auto;
+    width: 390px;
+    width: 370px;
+    height: auto;
+    border: 2px solid #ffd580;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.product-content h2 {
+    color: #f5b041;
+    margin: 30px 0 20px 0px;
+    border-bottom: 2px solid #f5b041;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.product-content ul {
+    margin: 0 0 0px 30px;
+    line-height: 1.6;
+}
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+.specs-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.specs-table td:first-child {
+    font-weight: bold;
+    color: #f5b041;
+    width: 40%;
+}
+
+.laptop-highlights li {
+    list-style-type: "\1F4BB";
+    margin-bottom: 8px;
+}
+
+.review-bottom {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.buy-btn{
+    background-color: #f5b041;
+    color: #000;
+    border: none;
+    padding: 12px 28px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.buy-btn:hover {
+    transform: scale(1.1);
+    background-color: #ffd580;
+}
+
+.review-bottom .btn{
+    background-color: #007BFF;
+    color: #000;
+    border: none;
+    padding: 12px 28px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+
+.review-bottom .btn:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+}
+
+/* ===============================
+     Smartphone Z10 Page Styles
+   =============================== */
+.smartphone-background{
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url('../images/background-images/smartphone-background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.smartphone-wrapper {
+    padding: 20px;
+    z-index: 1; 
+}
+
+.smartphone-wrapper .card{
+    background-color: #5D8AA8;
+    border: 3px solid #2472a7; 
+}
+
+p.banner-dscptn,
+h1.banner-title {
+    color: #fff;
+}
+
+.gadget-subtitle{
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.smartphone-wrapper .back-link{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.smartphone-wrapper .back-link:hover{
+    color: gold;
+}
+
+/* ===============================
+     Smartphone Z10 Pro Page Styles
+   =============================== */
+    .smartphone-highlights li {
+    list-style-type: "\1F4F1";
+    margin-bottom: 8px;
+}
+
+/* =============================
+       Tablet A7 Page Styles
+   ============================= */
+.tablet-background{
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url('../images/background-images/tablet-background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.tablet-wrapper {
+    padding: 20px;
+    z-index: 1; 
+}
+
+.tablet-wrapper .card{
+    background-color: gray;
+    backdrop-filter: blur(10px);
+    border: 3px solid rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+/* =============================
+  Tablet A7 Standard Page Styles
+   ============================= */
+  .tablet-highlights li {
+    list-style-type: "\1F532";
+    margin-bottom: 8px;
+}
+
+/* ============================
+    Smartwatch S3 Page Styles
+   ============================ */
+.smartwatch-background{
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url('../images/background-images/smartwatch-background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.smartwatch-wrapper {
+    padding: 20px;
+    z-index: 1; 
+}
+
+.smartwatch-wrapper .card{
+    background-color: #0a3d62;
+    backdrop-filter: blur(10px);
+    border: 3px solid rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+/* ============================
+    Smartwatch S3 Page Styles
+   ============================ */
+.smartwatch-highlights li {
+    list-style-type: "\231A";
+    margin-bottom: 8px;
+}
+
+/* ============================
+   Headphone H900 Page Styles
+   ============================ */
+.headphone-background{
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url('../images/background-images/headphone-background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.headphone-wrapper {
+    padding: 20px;
+    z-index: 1; 
+}
+
+.headphone-wrapper .card{
+    background-color: #363d9c5b;
+    backdrop-filter: blur(10px);
+    border: 3px solid rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+/* ===================================
+   Headphone H900 Standard Page Styles
+   ===================================*/
+.headphone-highlights li {
+    list-style-type: "\1F3A7";
+    margin-bottom: 8px;
+}
+
+/* ============================
+      Camera C500 Page Styles
+   ============================ */
+.camera-background{
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url('../images/background-images/camera-background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.camera-wrapper {
+    padding: 20px;
+    z-index: 1; 
+}
+
+.camera-wrapper .card{
+    background-color: #2d572f5b;
+    backdrop-filter: blur(10px);
+    border: 3px solid rgba(255,255,255,0.2);
+}
+
+/* ===============================
+  Camera C500 Standard Page Styles
+   ================================*/
+.camera-highlights li {
+    list-style-type: "\1F4F7";
+    margin-bottom: 8px;
+}
+
+/* ==================
+    ABOUT PAGE STYLES
+   ================== */
+.about-main{
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 20px 60px;
+    color: #222;
+    line-height: 1.7;
+}
+
+/* Banner / Intro section */
+.about-banner {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-banner h1 {
+    font-size: 2.5rem;
+    color: #0e2035;
+    margin-bottom: 15px;
+}
+
+.about-banner .lead {
+    font-size: 1.1rem;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Section Headings */
+.about-main h2 {
+    font-size: 1.8rem;
+    color: #004d66;
+    margin-top: 40px;
+}
+
+/* List Highlights */
+.about-highlights {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.about-highlights li {
+    background: #e6f2ff;
+    border-left: 5px solid #2e9de7;
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+/* What we do, Mission & Join sections */
+.about-banner p,
+.about-what-we-do p,
+.about-mission p,
+.about-join p {
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+}
+
+/* Call-to-action buttons */
+.about-btn {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.about-btn .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #004d66;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.about-btn .btn:hover {
+    background-color: #2e9de7;
+    transform: scale(1.05);
+}
+
+/* ==================
+  REVIEWS PAGE STYLES
+   ================== */
+body.review-page{
+    background-color: rgb(112, 119, 119);
+}
+
+.container h2{
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.categories {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.category-btn {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+}
+.category-btn.active {
+    background: #333;
+    color: #fff;
+}
+
+/* Gadget Grid */
+.gadget-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    justify-content: center;
+    gap: 20px;
+}
+
+.gadget-grid h3{
+    color: #fff;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.gadget-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+.gadget-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* ====================
+    CONTACT PAGE STYLES
+   ==================== */
+.contact-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-section h1 {
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form .btn:hover {
+    background-color: #0056b3;
+}
+
+/* ================
+    Footer Section
+   ================ */
+.site-footer {
+    min-width: 100vw;
+    background: rgb(33, 58, 58);
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* top row */
+.footer-top {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Center: Info text */
+.footer-center {
+    text-align: center;
+    flex: 1;
+}
+.footer-top h3 {
+    margin-bottom: 6px;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+.footer-center p {
+    margin: 0;
+    color: #cfcfcf ;
+    opacity: 1;
+    font-size: 0.95rem;
+
+}
+
+/* Right: Quick Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    text-align: center;
+}
+.footer-links li {
+    margin: 5px 0;
+}
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover {
+    color: #f4b400;
+}
+
+.footer-left h3{
+    text-align: center;
+}
+/* Bottom footer */
+.footer-bottom {
+    background: rgb(28, 51, 51);
+    text-align: center;
+    padding: 12px 10px;
+    font-size: 14px;
+}
+
+.footer-bottom .disclaimer{
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Scroll To Top Button */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 12px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 999;
+}
+
+#scrollToTopBtn.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+#scrollToTopBtn:hover {
+    background-color: #0056b3;
+}
+
+/* ============
+    Responsive
+   ============ */
+/* Medium screens - laptop/tablet landscape (≤1024px) */
+@media screen and (max-width: 1024px) {
+  .review-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categories button{
+    padding: 8px;
+    margin: 0 3px;
+   }
+
+  /* Adjusted font sizes */
+  h1 { font-size: 32px; }
+  h2 { font-size: 24px; }
+  .card h3,
+  .footer-top h3 { font-size: 20px; }
+  .banner p{font-size: 18px;}
+  .card p,
+  .card a { font-size: 15px; }
+
+  .categories {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+}
+
+/* Small screens - tablets portrait / large phones (≤768px) */
+@media screen and (max-width: 768px) {
+  nav ul li{ margin: 0 10px;}
+  nav ul li a,
+  .logo{ font-size: 13px; }
+
+  /* Adjusted font sizes */
+  .about-banner h1,
+  h1 { font-size: 24px; }
+  .about-main h2,
+  h2 { font-size: 20px; }
+  .banner p,
+  .banner-dscptn,
+  .banner-section-dscptn{
+    font-size: 16px;
+  }
+  .card h3,
+  .footer-top h3 { font-size: 18px; }
+  .card p,
+  .card a { font-size: 14px; }
+  .review-cards,
+  .gadget-grid { margin: 0 10px; }
+
+  /* Adjusted categories button,reviews page */
+  .category-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px;
+    border:none;
+    border-bottom: 2px solid #ccc;
+    background: none;
+    color: #000;
+    transition: border-color 0.35, color o.3s;
+  }
+  .category-btn:hover{ color: #000; }
+  #scrollToTopBtn{
+    padding: 6px 8px;
+    right: 10px;
+  }
+  .product-content img{
+    width: 250px;
+  }
+
+}
+
+/* Extra small screens - very small mobile phones (≤480px) */
+@media screen and (max-width: 480px) {
+  .review-cards {
+    grid-template-columns: 1fr;
+  }
+
+  header{
+    padding: 10px 10px;
+  }
+
+  nav ul li {
+    margin: 0 5px;
+  }
+
+  .camera #black-back-link{
+    color: white;
+  }
+
+  /* Adjusted font sizes */
+  h1 { font-size: 24px; }
+  h2 { font-size: 18px; }
+  .banner p,
+  .banner-dscptn,
+  .banner-section-dscptn{
+    font-size: 14px;
+  }
+
+  .card h3,
+  .footer-top h3 { font-size: 16px; }
+  .card p,
+  .card a { font-size: 13px; }
+  .footer-top p,
+  .footer-links a { font-size: 13px; }
+  a .icon{
+    width: 24px;
+    height: 24px;
+  }
+  .about-btn .btn{
+    margin-bottom: 10px;
+  }
+
+  .category-btn.active {
+    background: #333;
+    color: #fff;
+}
+
+}
+
