@@ -10,6 +10,15 @@
 /* ================
    HOME PAGE STYLES
    ================ */
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
+}
 header {
     background: rgb(28, 51, 51);
     position: sticky;
@@ -595,7 +604,7 @@ h1.banner-title {
 /* ==================
   REVIEWS PAGE STYLES
    ================== */
-body.review-page{
+main.review-page{
     background-color: rgb(112, 119, 119);
 }
 
